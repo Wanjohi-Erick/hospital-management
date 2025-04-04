@@ -20,8 +20,8 @@ export default {
   },
 
   env: {
-    baseUrl: 'http://localhost:8082/api/',
-    localUrl: 'http://localhost:8082/api/'
+    baseUrl: 'https://d964-105-163-157-91.ngrok-free.app/api/',
+    localUrl: 'https://d964-105-163-157-91.ngrok-free.app/api/'
 
     /*baseUrl: 'https://afyapro.co.ke/api/',
     localUrl: 'https://afyapro.co.ke/api/'*/
