@@ -62,7 +62,7 @@ const mutations = {
     state.showLoader = false;
     state.patient = payload;
   },
-  //Delete Patient Mutations 
+  //Delete Patient Mutations
 
   ["DELETE_PATIENT"](state) {
     state.showLoader = true;
@@ -152,7 +152,7 @@ const actions = {
   },
   async update_patient({ commit }, payload) {
     commit("UPDATE_PATIENT");
-    await this.$api.$put(`patients/${payload.id}/`, payload)
+    await this.$api.$put(`patients/${payload.id}`, payload)
       .then(response => {
         commit("UPDATE_PATIENT_SUCCESS", response);
 

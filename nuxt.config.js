@@ -9,7 +9,7 @@ export default {
   ssr: false,
   router: {
     mode: 'hash',
-    base: '/', //routerBase,
+    base: routerBase,
     routerNameSplitter: "/",
     middleware: ['router']
   },
@@ -20,8 +20,12 @@ export default {
   },
 
   env: {
-    baseUrl: 'https://api.ospic.app/api/',
-    localUrl: 'http://localhost:8080/api/'
+    baseUrl: 'http://localhost:8082/api/',
+    localUrl: 'http://localhost:8082/api/'
+
+    /*baseUrl: 'https://afyapro.co.ke/api/',
+    localUrl: 'https://afyapro.co.ke/api/'*/
+
   },
 
   // Global page headers (https://go.nuxtjs.dev/config-head)

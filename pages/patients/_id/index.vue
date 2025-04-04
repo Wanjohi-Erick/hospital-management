@@ -50,7 +50,7 @@ export default {
   methods: {
     async viewusedata() {
       return await this.$api
-        .$get(`patients/${this.$route.params.id}/`)
+        .$get(`patients/${this.$route.params.id}`)
         .then((response) => {
           this.userdata = response;
         })

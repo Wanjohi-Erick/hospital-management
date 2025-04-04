@@ -248,7 +248,12 @@
             show-arrows-on-hover="true"
             :show-arrows="$vuetify.breakpoint.mobile"
           >
-            <v-tab class="font-weight-normal">
+            <v-tab
+              class="font-weight-normal"
+              @click="
+                getPatientDiagnosis();
+              "
+            >
               <v-icon small left>mdi-stethoscope</v-icon>
               Diagnoses
             </v-tab>
@@ -384,6 +389,15 @@ export default {
     };
   },
   methods: {
+    async getPatientDiagnosis() {
+      return await this.$api.$get(`diagnoses/${this.$route.params.id}`)
+        .then(response => {
+          this.diagnoses = response.reverse();
+        }).catch(error => {
+          console.log(error);
+
+        });
+    },
     async getServiceById() {
       return await this.$api
         .$get(`consultations/${this.$route.params.id}`)
